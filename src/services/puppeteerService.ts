@@ -381,12 +381,12 @@ export const publishAdOnSemiNuevos = async (
 
           await page.waitForNavigation({
             waitUntil: "networkidle0",
-            timeout: 10000,
+            timeout: 30000,
           });
         } catch (modalError) {
           await page.waitForNavigation({
             waitUntil: "networkidle0",
-            timeout: 10000,
+            timeout: 30000,
           });
         }
       } catch (error: any) {

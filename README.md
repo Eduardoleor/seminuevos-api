@@ -60,7 +60,7 @@ Opcionales (valores por defecto):
 ```bash
 DEFAULT_TIMEOUT=30000      # 30 segundos
 NAVIGATION_TIMEOUT=60000   # 1 minuto
-PORT=3000                  # Puerto del servidor
+PORT=3333                  # Puerto del servidor
 ```
 
 | Variable              | Requerido | Ejemplo                      |
@@ -71,10 +71,10 @@ PORT=3000                  # Puerto del servidor
 | PASSWORD_SEMINUEVOS   | Sí        | ****\*\*\*\*****             |
 | DEFAULT_TIMEOUT       | No        | 30000                        |
 | NAVIGATION_TIMEOUT    | No        | 60000                        |
-| PORT                  | No        | 3000                         |
+| PORT                  | No        | 3333                         |
 
 ## Documentación API 📚
-### Endpoints disponibles en http://localhost:3000/api-docs
+### Endpoints disponibles en http://localhost:3333/api-docs
 
 ### Respuestas de la API
 
@@ -95,7 +95,7 @@ PORT=3000                  # Puerto del servidor
 
 ## Ejemplo de Uso Completo 🤘🏼
 ```bash
-curl -X POST http://localhost:3000/api/publish \
+curl -X POST http://localhost:3333/api/publish \
   -H "Content-Type: application/json" \
   -d '{
     "price": "50000",
