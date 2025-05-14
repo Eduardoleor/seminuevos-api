@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SemiNuevos API",
+    "description": "API para publicar anuncios en SemiNuevos.com",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/publish": {
+      "post": {
+        "summary": "Publicar un anuncio en SemiNuevos.com",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "price": {
+                    "type": "string",
+                    "example": "200000"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "Excelente estado, único dueño"
+                  }
+                },
+                "required": ["price", "description"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Anuncio publicado exitosamente"
+          },
+          "500": {
+            "description": "Error al publicar el anuncio"
+          }
+        }
+      }
+    }
+  }
+}
