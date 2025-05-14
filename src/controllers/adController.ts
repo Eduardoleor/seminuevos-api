@@ -7,10 +7,10 @@ export const publishAd = async (req: Request, res: Response) => {
     const body = req.body;
     const { price, description } = body;
 
-    const response = await publishAdOnSemiNuevos(price, description);
+    const data = await publishAdOnSemiNuevos(price, description);
     res.status(200).json({
       message: "Anuncio publicado exitosamente",
-      response,
+      data,
     });
   } catch (error) {
     logger.error("Error al publicar el anuncio", error);

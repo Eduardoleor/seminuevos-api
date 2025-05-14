@@ -32,10 +32,68 @@
         },
         "responses": {
           "200": {
-            "description": "Anuncio publicado exitosamente"
+            "description": "Anuncio publicado exitosamente",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Anuncio publicado exitosamente"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "Ad published successfully"
+                        },
+                        "evidence": {
+                          "type": "object",
+                          "properties": {
+                            "screenshot": {
+                              "type": "string",
+                              "format": "byte",
+                              "example": "data:image/png;base64,iVBORw0KGgKpJEcX"
+                            },
+                            "description": {
+                              "type": "string",
+                              "example": "There is description"
+                            },
+                            "price": {
+                              "type": "integer",
+                              "example": 300000
+                            }
+                          },
+                          "required": ["screenshot", "description", "price"]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "500": {
-            "description": "Error al publicar el anuncio"
+            "description": "Error al publicar el anuncio",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Error message details"
+                    },
+                    "code": {
+                      "type": "integer",
+                      "example": 500
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

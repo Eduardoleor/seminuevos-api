@@ -522,6 +522,8 @@ export const publishAdOnSemiNuevos = async (
       message: "Ad published successfully",
       evidence: {
         screenshot: `data:image/png;base64,${evidenceBase64}`,
+        description,
+        price,
       },
     };
   } catch (error) {
