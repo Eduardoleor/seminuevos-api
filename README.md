@@ -13,6 +13,22 @@
 - Capa de servicio abstracta
 - Manejo claro de errores
 
+## Requerimientos de instalación ⚒️
+Para instalar y ejecutar este proyecto necesitas:
+
+- Node.js >= 18.x
+- npm >= 9.x
+- Acceso a internet
+- Cuenta válida en SemiNuevos.com
+- Editor de texto recomendado: VSCode
+
+Asegúrate de tener Node.js y npm instalados. Puedes verificarlo con:
+
+```bash
+node -v
+npm -v
+```
+
 ## Instalación ⚙️
 
 ```bash
@@ -101,6 +117,21 @@ curl -X POST http://localhost:3000/api/publish \
 4. Desarrollar con tests
 5. Actualizar documentación
 6. Crear Pull Request
+
+## Logs y errores 🐞
+Cuando ocurre un error durante la publicación, la API almacena un archivo y procesa en su ejecución logs para facilitar la búsqueda de bugs.
+
+### Logs y archivos de errores
+
+- Todos los errores se registran en un archivo de log (`/app.log`) con marca de tiempo, tipo de error y detalles relevantes.
+- Almacenamiento de capturas para verificar error visualmente.
+- El sistema también muestra logs en la terminal con formato:
+  ```
+  [2024-06-01T12:34:56.789Z] [ERROR] [NavigationError] No se encontró el botón de publicar
+  ```
+- El registro incluye el timespan desde el inicio de la operación, facilitando la localización y análisis de errores en procesos largos.
+
+Revisa los logs para identificar rápidamente el origen y contexto de cualquier fallo.
 
 
 ## Seguridad ⚠️
